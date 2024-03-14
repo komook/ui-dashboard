@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screens  bg-[#F8F9FA] flex relative">
         <Sidebar/>
-        <div className="p-8 w-full">{children}</div>
+        <div className="pt-8 pr-4 w-full">{children}</div>
       </body>
     </html>
   );
