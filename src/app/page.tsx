@@ -1,13 +1,17 @@
+'use client'
+
 import React from "react";
 import Header from "./components/Header";
 import Card, { CardProps } from "./components/Card";
-import { FaFile, FaShoppingCart, FaWallet } from "react-icons/fa";
+import { FaFile, FaShoppingCart, FaWallet, FaWrench } from "react-icons/fa";
 import { TbWorld } from "react-icons/tb";
 import chakra from './assets/images/chakra.png'
 import Image from "next/image";
 import people from './assets/images/pople.png'
-import shadowPeople from './assets/images/shadow-people.png'
-
+import ChartsArea from "./components/ChartsArea";
+import ChartsBar from "./components/ChartsBar";
+import ProgressBar from "@ramonak/react-progress-bar";
+import { IoIosRocket } from "react-icons/io";
 
 const cardData: CardProps[] = [
   {
@@ -31,6 +35,35 @@ const cardData: CardProps[] = [
     img: <FaShoppingCart />,
   },
 ];
+
+const ActiveUsers = [
+  {
+    text: 'Users',
+    count: '32,984',
+    img: <FaWallet />,
+    progress: 30,
+  },
+  {
+    text: 'Click',
+    count: '2,42m',
+    img: <IoIosRocket />,
+    progress: 70,
+  },
+  {
+    text: 'Sales',
+    count: '2,400$',
+    img: <FaShoppingCart />,
+    progress: 100,
+  },
+  {
+    text: 'Items',
+    count: '320',
+    img: <FaWrench />,
+    progress: 50,
+  },
+]
+
+
 
 export default function Home() {
   return (
@@ -63,16 +96,50 @@ export default function Home() {
           </div>
           <div>
             <Image width={615} className="rounded-[10px] " src={people} alt="people" />
-            <Image width={615} className="rounded-[10px] top-[7%] left-[3%] absolute" src={shadowPeople} alt="#" />
           </div>
         </div>
       </section>
-      <section>
-        <div>
+      <section className="mt-[30px] rounded-[15px] flex justify-between flex-wrap">
+        <div className=" rounded-[15px] bg-white p-5 w-[652px] h-[445px]">
+          <div>
+            <ChartsBar />
+          </div>
+          <div>
+            <p className="text-[18px] font-bold mt-[18px] mb-[40px]">Active Users</p>
+          </div>
+          <div className="flex justify-between  ">
+            {ActiveUsers.map((i) => (
+              <div className="w-[100px]">
+                <div className="flex items-center">
+                  <div className="text-white p-3 bg-[#4FD1C5] rounded-[15px]">
+                    {i.img}
+                  </div>
+                  <div className="text-[12px] text-[#A0AEC0] ml-[8px]">
+                    {i.text}
+                  </div>
+                </div>
+                <div className="font-bold text-[18px] pt-[15px] pb-[10px]">
+                  {i.count}
+                </div>
+                <div>
+                  <ProgressBar width="60" bgColor='#4FD1C5' height="5px" customLabel=' ' completed={i.progress} />
+                </div>
+              </div>
+            ))}
 
+          </div>
         </div>
-        <div>
-
+        <div className="flex flex-col justify-between bg-white rounded-[15px] p-4 w-[924px] h-[445px]">
+          <div>
+            <div className="font-bold text-[18px]">
+              Sales overview
+            </div>
+            <div>
+              <span className="text-green-500">(+5) more </span>
+               in 2021
+            </div>
+          </div>
+          <ChartsArea />
         </div>
       </section>
     </>
