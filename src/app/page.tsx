@@ -99,7 +99,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="mt-[30px] rounded-[15px] flex justify-between flex-wrap">
+      <section className="mt-[20px] rounded-[15px] flex justify-between flex-wrap">
         <div className=" rounded-[15px] bg-white p-5 w-[652px] h-[445px]">
           <div>
             <ChartsBar />
@@ -129,17 +129,17 @@ export default function Home() {
 
           </div>
         </div>
-        <div className="flex flex-col justify-between bg-white rounded-[15px] p-4 w-[924px] h-[445px]">
+        <div className="flex flex-col justify-between bg-white rounded-[15px] pb-8 p-4 w-[924px] h-[445px]">
           <div>
             <div className="font-bold text-[18px]">
               Sales overview
             </div>
             <div>
               <span className="text-green-500">(+5) more </span>
-               in 2021
+              in 2021
             </div>
           </div>
-          <ChartsArea />
+          <ChartsArea/>
         </div>
       </section>
     </>
