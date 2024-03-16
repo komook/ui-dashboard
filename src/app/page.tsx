@@ -12,6 +12,7 @@ import ChartsArea from "./components/ChartsArea";
 import ChartsBar from "./components/ChartsBar";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { IoIosRocket } from "react-icons/io";
+import Projects from "./components/Projects";
 
 const cardData: CardProps[] = [
   {
@@ -71,12 +72,12 @@ export default function Home() {
       <div className="">
         <Header title="Dashboard" />
       </div>
-      <section className="flex justify-between flex-wrap gap-2 mt-[25px]">
+      <section className="flex justify-center gap-5 flex-wrap mt-[25px]">
         {cardData.map((d, i) => (
           <Card key={i} text={d.text} count={d.count} img={d.img} />
         ))}
       </section>
-      <section className="flex justify-between gap-3 flex-wrap mt-[20px]">
+      <section className="flex justify-center gap-5 flex-wrap mt-[20px]">
         <div className="flex flex-wrap justify-between bg-white w-[922px] h-[290px] p-4 rounded-[10px]">
           <div>
             <p className="text-[#A0AEC0] font-bold text-[12px]">Built by developers</p>
@@ -99,7 +100,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="mt-[20px] rounded-[15px] flex justify-between flex-wrap">
+      <section className="mt-[20px] rounded-[15px] flex gap-5 justify-center flex-wrap">
         <div className=" rounded-[15px] bg-white p-5 w-[652px] h-[445px]">
           <div>
             <ChartsBar />
@@ -140,6 +141,14 @@ export default function Home() {
             </div>
           </div>
           <ChartsArea/>
+        </div>
+      </section>
+      <section>
+        <div>
+              <Projects/>
+        </div>
+        <div>
+
         </div>
       </section>
     </>

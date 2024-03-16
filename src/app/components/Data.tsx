@@ -1,9 +1,14 @@
 import React from 'react'
 import { DiAndroid, DiAngularSimple, DiApple, DiChrome, DiCss3, DiJsBadge } from 'react-icons/di'
 
-type Props = {}
+type ProjectsProps = {
+  title:string;
+  budget: string;
+  completion: string;
+  icon: React.ReactNode;
+}
 
-export const projects = [ 
+export const projects:ProjectsProps[] = [ 
   {
     title: 'Chakra Soft UI Version',
     budget: '$14,000',
@@ -43,8 +48,3 @@ export const projects = [
 ]
 
 
-export default function Data({}: Props) {
-  return (
-    <div>Data</div>
-  )
-}

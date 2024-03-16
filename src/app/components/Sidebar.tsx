@@ -20,12 +20,12 @@ export default function Sidebar({ }: Props) {
     }
 
     return (
-        <div className=' h-full flex-col w-[350px]  flex text-white '>
+        <div className=' h-full flex-col   flex text-white '>
             <section className='px-5 py-4 flex items-center gap-4'>
                 <HoverDiv onClick={toggleSideBar} className='p-2 text-black rounded-full'>
                     <IoIosMenu className='text-3xl' />
                 </HoverDiv>
-                <h1 className='text-black font-bold'>PURITY UI DASHBOARD</h1>
+                <h1 className={cn('text-black font-bold',{ 'hidden': !isSidebarOpen })}>UI DASHBOARD</h1>
             </section>
             <main className={cn('flex flex-col w-[240px] h-full', {
                 'w-[100px]': !isSidebarOpen
@@ -60,8 +60,8 @@ function SidebarItem(props: SidebarItemProps) {
     return (
         <Link href={props.path ?? "#"}>
             <HoverDiv className={cn('w-full flex items-center gap-5', { 'flex-col gap-2': !props.isSidebarOpen })} isActive={pathname === props.path}>
-                <section className='text-2xl h-7  items-center'>{props.path === pathname ? props.activeIcon : props.defaultIcon}</section>
-                <p className={cn('text-sm font-semibold', { 'text-[10px]': !props.isSidebarOpen })}>{props.title}</p>
+                <section className={cn('text-2xl h-7 items-center', {'text-white bg-[#4FD1C5] pb-8 pl-2 pr-2 pt-2 rounded-[10px]' : props.path === pathname ? props.defaultIcon : ''})}>{props.path === pathname ? props.activeIcon : props.defaultIcon}</section>
+                <p className={cn('text-sm font-semibold text-[16px]', { 'text-[10px]': !props.isSidebarOpen })}>{props.title}</p>
             </HoverDiv>
         </Link>
     )

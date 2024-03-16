@@ -8,13 +8,14 @@ type HeaderProps = {
 }
 
 export default function Header(props: HeaderProps) {
+    
     return (
-        <div className='flex justify-between w-full'>
-            <p className='font-bold'>{props.title}</p>
+        <div className='flex justify-between items-center w-full'>
+            <p className='font-bold text-[20px] ml-[50%]'>{props.title}</p>
             <div className='flex items-center gap-5'>
                 <div className='flex items-center gap-3 cursor-pointer'>
                     <IoPerson />
-                    <p className='font-bold'>Sing In</p>
+                    <p className='font-bold'>Sign In</p>
                 </div>
                 <IoIosSettings className='cursor-pointer'/>
                 <FaBell className='cursor-pointer'/>
