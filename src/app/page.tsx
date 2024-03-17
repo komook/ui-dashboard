@@ -13,6 +13,8 @@ import ChartsBar from "./components/ChartsBar";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { IoIosRocket } from "react-icons/io";
 import Projects from "./components/Projects";
+import Orders from "./components/Orders";
+import Footer from "./components/Footer";
 
 const cardData: CardProps[] = [
   {
@@ -78,17 +80,17 @@ export default function Home() {
         ))}
       </section>
       <section className="flex justify-center gap-5 flex-wrap mt-[20px]">
-        <div className="flex flex-wrap justify-between bg-white w-[922px] h-[290px] p-4 rounded-[10px]">
+        <div className="flex flex-wrap justify-between bg-white w-[922px] h-[290px] p-4 rounded-[10px] max-[1625px]:w-[600px] max-[1200px]:w-[350px]">
           <div>
             <p className="text-[#A0AEC0] font-bold text-[12px]">Built by developers</p>
             <p className="text-[#2D3748] font-bold text-[18px]">Purity UI Dashboard</p>
             <p className="text-[#A0AEC0] w-[330px] text-[14px]">From colors, cards, typography to complex elements, you will find the full documentation.</p>
           </div>
           <div>
-            <Image className="rounded-[10px]" src={chakra} alt="#" />
+            <Image className="rounded-[10px] max-[1625px]:w-[245px] " src={chakra} alt="#" />
           </div>
         </div>
-        <div className="relative rounded-[10px] bg-white p-5 h-[290px] w-[654px]">
+        <div className="relative rounded-[10px] bg-white p-5 h-[290px] w-[654px] max-[1200px]:w-[450px] max-[1200px]:h-[205px]">
           <div className="z-10 absolute top-[12%] left-[7%]">
             <p className="text-white font-bold text-[18px]">
               Work with the Rockets
@@ -101,8 +103,8 @@ export default function Home() {
         </div>
       </section>
       <section className="mt-[20px] rounded-[15px] flex gap-5 justify-center flex-wrap">
-        <div className=" rounded-[15px] bg-white p-5 w-[652px] h-[445px]">
-          <div>
+        <div className=" rounded-[15px] bg-white p-5 w-[652px] h-[445px] max-[1625px]:w-[500px] max-[1200px]:w-[850px]">
+          <div >
             <ChartsBar />
           </div>
           <div>
@@ -122,7 +124,7 @@ export default function Home() {
                 <div className="font-bold text-[18px] pt-[15px] pb-[10px]">
                   {i.count}
                 </div>
-                <div>
+                <div >
                   <ProgressBar width="60" bgColor='#4FD1C5' height="5px" customLabel=' ' completed={i.progress} />
                 </div>
               </div>
@@ -130,7 +132,7 @@ export default function Home() {
 
           </div>
         </div>
-        <div className="flex flex-col justify-between bg-white rounded-[15px] pb-8 p-4 w-[924px] h-[445px]">
+        <div className="flex flex-col justify-between bg-white rounded-[15px] pb-8 p-4 w-[924px] h-[445px] max-[1625px]:w-[750px] max-[1200px]:w-[850px]">
           <div>
             <div className="font-bold text-[18px]">
               Sales overview
@@ -140,16 +142,21 @@ export default function Home() {
               in 2021
             </div>
           </div>
-          <ChartsArea/>
+          <div>
+            <ChartsArea />
+          </div>
+        </div>
+      </section>
+      <section className="flex justify-center gap-5 mt-[20px] flex-wrap">
+        <div>
+          <Projects />
+        </div>
+        <div>
+          <Orders />
         </div>
       </section>
       <section>
-        <div>
-              <Projects/>
-        </div>
-        <div>
-
-        </div>
+        <Footer />
       </section>
     </>
   );

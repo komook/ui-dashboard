@@ -1,9 +1,17 @@
 import React from 'react'
+import Header from '../components/Header'
 
 type Props = {}
 
 export default function page({}: Props) {
   return (
-    <div>page</div>
+    <>
+    <section>
+      <Header title='Tables'/>
+    </section>
+    <section>
+      
+    </section>
+    </>
   )
 }

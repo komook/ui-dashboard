@@ -10,7 +10,7 @@ export type CardProps = {
 export default function Card(props: CardProps) {
     return (
         <>
-            <section className='flex items-center justify-between bg-white w-[382px] h-[80px] rounded-[15px] p-4'>
+            <section className='flex items-center justify-between bg-white w-[382px] h-[80px] rounded-[15px] p-4 max-[1625px]:w-[300px]'>
                 <div className='flex flex-col'>
                     <div className='text-[#bababa] font-bold text-[12px]'>
                         {props.text}

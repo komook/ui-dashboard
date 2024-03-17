@@ -77,7 +77,7 @@ type Props = {}
 
 export default function ChartsBar({ }: Props) {
     return (
-        <div className='pt-4  pr-6 pl-6 rounded-[15px] w-[620px] h-[222px] text-black bg-gradient-to-r from-[#19003f] to-[#040009]'>
+        <div className='pt-4  pr-6 pl-6 rounded-[15px] w-[620px] h-[222px] text-black bg-gradient-to-r from-[#19003f] to-[#040009] max-[1625px]:w-[460px] max-[1200px]:w-[750px]'>
             <Bar options={options} data={data} />
         </div>
     )

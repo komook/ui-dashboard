@@ -6,10 +6,9 @@ type Props = {}
 
 export default function Projects({ }: Props) {
     return (
-        <div className='flex flex-col justify-between w-[1057px] h-[519px] bg-white p-5 rounded-[15px]'>
+        <div className='flex flex-col justify-between w-[1057px] h-[519px] bg-white p-5 rounded-[15px] max-[1625px]:w-[700px] max-[1200px]:w-[850px]'>
             <div>
                 <div>
-                    
                     <p>Projects</p>
                     <div className='text-[#A0AEC0] flex items-center'><span className=' text-[8px] text-white p-1 rounded-full bg-green-300 mr-[7px]'><FaCheck /> </span> <span className='font-bold mr-[4px]'>30 done </span> this month</div>
                 </div>
