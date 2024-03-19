@@ -6,7 +6,7 @@ type Props = {}
 
 export default function Projects({ }: Props) {
     return (
-        <div className='flex flex-col justify-between w-[1057px] h-[519px] bg-white p-5 rounded-[15px] max-[1625px]:w-[700px] max-[1200px]:w-[850px]'>
+        <div className='flex flex-col justify-between bg-white p-5 rounded-[15px] '>
             <div>
                 <div>
                     <p>Projects</p>

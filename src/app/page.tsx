@@ -148,7 +148,7 @@ export default function Home() {
         </div>
       </section>
       <section className="flex justify-center gap-5 mt-[20px] flex-wrap">
-        <div>
+        <div className="w-[1057px] h-[519px] max-[1625px]:w-[700px] max-[1200px]:w-[850px]">
           <Projects />
         </div>
         <div>
