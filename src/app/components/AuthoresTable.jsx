@@ -112,9 +112,9 @@ export default function AuthoresTable() {
             <>
                 <Modal title="Edit" open={isModalOpen} footer={false} onCancel={handleCancel} >
                     <div className='flex flex-col items-center'>
-                        <input className='border-[2px] w-[300px] p-2 text-[18px] mb-[10px]' type="text" value={inputdata.name || ""} name='name' autoComplete='off' placeholder='Enter Name' onChange={data} />
-                        <input className='border-[2px] w-[300px] p-2 text-[18px] mb-[10px]' type="text" value={inputdata.number || ""} name="number" placeholder='Enter Job' onChange={data} />
-                        <button className='text-[20px] font-bold bg-green-300 p-3 rounded-[10px] mt-[10px] hover:bg-green-500 transition' onClick={updateinfo}>Update data</button>
+                        <input className='border-[2px] w-[300px] p-2 text-[18px] mb-[10px] rounded-[13px]' type="text" value={inputdata.name || ""} name='name' autoComplete='off' placeholder='Enter Name' onChange={data} />
+                        <input className='border-[2px] w-[300px] p-2 text-[18px] mb-[10px] rounded-[13px]' type="text" value={inputdata.number || ""} name="number" placeholder='Enter Job' onChange={data} />
+                        <button className='text-[20px] font-bold bg-green-300 pr-9 pl-9 pt-2 pb-2   rounded-[10px] mt-[10px] hover:bg-green-500 transition' onClick={updateinfo}>UPDATE</button>
                     </div>
                 </Modal>
             </>
@@ -127,9 +127,9 @@ export default function AuthoresTable() {
                         <div>AUTHOR</div>
                         <div className='flex'>
 
-                            <div className='absolute  left-[50.6%]'>FUNCTION</div>
-                            <div className='absolute  left-[68.5%]'>STATUS</div>
-                            <div className='absolute  left-[83.2%]'>EMPLOYED</div>
+                            <div className='absolute  left-[50%]'>FUNCTION</div>
+                            <div className='absolute  left-[68%]'>STATUS</div>
+                            <div className='absolute  left-[83%]'>EMPLOYED</div>
 
                         </div>
                     </div>
@@ -138,7 +138,7 @@ export default function AuthoresTable() {
                         array && array.map(
                             (item, i) => {
                                 return (
-                                    <div key={i} className='flex justify-between items-center border-t-[1px] pt-3 pb-3 hover:bg-[#F8F9FA]'>
+                                    <div key={i} className='flex justify-between items-center border-t-[1px] pt-3 pb-3 pr-2 hover:bg-[#F8F9FA]'>
                                         <div className='flex items-center'>
                                             <div className='text-[35px] bg-gray-100 p-1 rounded-[13px] mr-[15px]'>{item.icon}</div>
                                             <div className='flex flex-col'>
@@ -151,7 +151,7 @@ export default function AuthoresTable() {
                                             <div className='w-[100px] font-bold text-[#718096] text-[14px]'>{item.number}</div>
                                             <div className={item.status === 'Online' ? 'text-bold text-white bg-green-400 pt-0 pr-2 pb-0 pl-2 rounded-[10px]' : 'text-bold text-white bg-gray-400 pt-0 pr-2 pb-0 pl-2 rounded-[10px]'}>{item.status}</div>
                                             <div className='text-[#2D3748] font-bold'>{item.join}</div>
-                                            <div><button className='text-[#718096] font-bold text-[12px]' onClick={() => (updatedata(i), (showModal()))}>Edit</button></div>
+                                            <div><button className='text-[#718096] font-bold text-[12px] p-1 rounded-[5px] transition hover:bg-gray-200' onClick={() => (updatedata(i), (showModal()))}>Edit</button></div>
                                         </div>
 
                                     </div>

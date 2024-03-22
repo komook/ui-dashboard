@@ -29,8 +29,8 @@ export const ytSidebarDataset: SidebarItem[] = [
     activeIcon: <FaChartSimple />
   },
   {
-    title: "Biling",
-    path: "/biling",
+    title: "Billing",
+    path: "/billing",
     defaultIcon: <FaCreditCard />,
     activeIcon: <FaCreditCard />
   },

@@ -24,13 +24,7 @@ ChartJS.register(
 export const options = {
     responsive: true,
     
-    elements: {
-        bar: {
-            borderRadius: 11,
-            borderWidth: 0.6,
-        },
-        
-    },
+  
     
     scales: {
 
