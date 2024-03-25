@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import Header from '../components/Header'
 import CardImage from './../assets/images/CreditCard.png'
@@ -7,7 +9,7 @@ import Image from "next/image";
 import { IoWalletSharp } from 'react-icons/io5';
 import { FaPaypal } from 'react-icons/fa';
 import Invoices from '../components/Invoices'
-
+import BillingInfo from '../components/Billinginformation'
 
 
 type Props = {}
@@ -65,6 +67,9 @@ export default function BilingPage({ }: Props) {
         <div>
           <Invoices />
         </div>
+      </section>
+      <section>
+        <BillingInfo/>
       </section>
     </>
   )
