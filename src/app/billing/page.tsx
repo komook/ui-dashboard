@@ -10,6 +10,8 @@ import { IoWalletSharp } from 'react-icons/io5';
 import { FaPaypal } from 'react-icons/fa';
 import Invoices from '../components/Invoices'
 import BillingInfo from '../components/Billinginformation'
+import Transactions from '../components/Transactions'
+import Footer from '../components/Footer'
 
 
 type Props = {}
@@ -20,7 +22,7 @@ export default function BilingPage({ }: Props) {
       <section>
         <Header title='Billing' />
       </section>
-      <section className='flex flex justify-center gap-5 flex-wrap'>
+      <section className='flex justify-center gap-5 flex-wrap mt-[25px]'>
         <div>
           <div className='flex justify-between w-[989px]'>
             <div>
@@ -68,8 +70,12 @@ export default function BilingPage({ }: Props) {
           <Invoices />
         </div>
       </section>
-      <section>
+      <section className='flex justify-center gap-5 flex-wrap pt-[20px]'>
         <BillingInfo/>
+        <Transactions/>
+      </section>
+      <section>
+        <Footer/>
       </section>
     </>
   )
